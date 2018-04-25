@@ -14,14 +14,8 @@ namespace admin
 {
     public partial class frmLogin : Form
     {
-        String myconnectionstring;
-#pragma warning disable CS0169 // The field 'frmLogin.cb' is never used
-        MySqlCommandBuilder cb;
 #pragma warning restore CS0169 // The field 'frmLogin.cb' is never used
-        MySqlConnection dbconn;
-#pragma warning disable CS0169 // The field 'frmLogin.cmd' is never used
-        MySqlCommand cmd;
-#pragma warning restore CS0169 // The field 'frmLogin.cmd' is never used
+
         static string Encrypt(string value)
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
@@ -50,8 +44,8 @@ namespace admin
         {
             
             string passStr = Encrypt(passordTxt.Text);
-            myconnectionstring = "Database=drivingschool;Data Source=localhost;User=root;Password=Dina002";
-            dbconn = new MySqlConnection(myconnectionstring);
+            string myconnectionstring = "Database=drivingschool;Data Source=localhost;User=root;Password=Dina002";
+            MySqlConnection dbconn = new MySqlConnection(myconnectionstring);
             dbconn.Open();
             string query = "select * from users where brukernavn='" + brukernavnTxt.Text.Trim() + "' AND passord='" + passStr + "'";
             MySqlDataAdapter sda = new MySqlDataAdapter(query, myconnectionstring);
