@@ -44,7 +44,7 @@ namespace admin
         {
             
             string passStr = Encrypt(passordTxt.Text);
-            string myconnectionstring = "Database=drivingschool;Data Source=localhost;User=root;Password=Dina002";
+            string myconnectionstring = "Database=drivingschool;Data Source=localhost;User=root;Password=";
             MySqlConnection dbconn = new MySqlConnection(myconnectionstring);
             dbconn.Open();
             string query = "select * from users where brukernavn='" + brukernavnTxt.Text.Trim() + "' AND passord='" + passStr + "'";
