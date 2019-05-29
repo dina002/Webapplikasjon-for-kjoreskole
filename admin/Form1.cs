@@ -51,7 +51,7 @@ namespace admin
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            myconnectionstring = "Database=drivingschool;Data Source=localhost;User=root;Password=Dina002";
+            myconnectionstring = "Database=drivingschool;Data Source=localhost;User=root;Password=";
             dbconn = new MySqlConnection(myconnectionstring);
             dbconn.Open();
 
