@@ -14,7 +14,7 @@ namespace admin
     public partial class seResultater : Form
     {
 
-        public static MySqlConnection dbconn = new MySqlConnection("Database=drivingschool;Data Source=localhost;User=root;Password=Dina002");
+        public static MySqlConnection dbconn = new MySqlConnection("Database=drivingschool;Data Source=localhost;User=root;Password=");
 
         public seResultater()
         {
