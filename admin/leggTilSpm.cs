@@ -18,7 +18,7 @@ namespace admin
         MySqlDataAdapter da;
         DataSet ds;
         MySqlCommandBuilder cb;
-        string myconnectionstring = "Database=drivingschool;Data Source=localhost;User=root;Password=Dina002";
+        string myconnectionstring = "Database=drivingschool;Data Source=localhost;User=root;Password=";
         public leggTilSpm()
         {
             InitializeComponent();
